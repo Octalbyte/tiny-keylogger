@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "jsrat",
+  "description": "A Remote Administration Tool written in JS (and C++)",
+  "version": "0.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-P-S-O/jsrat.git"
+  },
+  "keywords": [
+    "rat"
+  ],
+  "author": "J-P-S-O",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/J-P-S-O/jsrat/issues"
+  },
+  "homepage": "https://github.com/J-P-S-O/jsrat#readme",
+  "dependencies": {
+    "node-banner": "^1.4.0"
+  }
+}
