@@ -1,36 +1,25 @@
 //Use this to decode the email you will be sent xD
-
-
 #include <stdio.h>
 #include <time.h>
 #include <iostream>
-
 using namespace std;
-
-
 char* decode(int i);
 int remember=0;
-
 int main(){
     FILE *file = fopen("Record.log", "a");
     fprintf(file, "0");
     fclose(file);
-
     FILE *inputFile, *outputFile;
-
     if((inputFile=fopen("Record.log", "r"))==NULL || (outputFile=fopen("Data.log", "a"))==NULL){
         printf("ERROR!!!");
         return 1;
     }
-
     int num;
     char date[30];
     char ch = fgetc(inputFile);
     while(ch!=EOF){
-
         if(ch=='\t'){
             fprintf(outputFile, ">>\n");
-
             fscanf(inputFile, "%d", &num);
             while(num!=0){
                 fprintf(outputFile, "%s", decode(num));
@@ -49,7 +38,6 @@ int main(){
 
     return 0;
 }
-
 
 char* decode(int i){
     char* ch;
