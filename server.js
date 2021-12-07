@@ -6,6 +6,11 @@ let server = net.createServer(serverlib.main)
 let banner = require("node-banner")
 let prompt = require("prompt")
 let errhandle = require("./lib/errhandle")
+const readline = require('readline');
+let eval = require("./lib/eval")
+
+
+
 prompt.start()
 
 console.clear()
@@ -27,11 +32,19 @@ let conf = JSON.parse(rawconf)
 
 server.listen(conf.port, () => {
     console.log("Server started")
-    // eternal recall of async function
-    prompt.get(["JsRat"],(err, result)=>{
-        if (err) {errhandle.main(err)}
-        console.log("Received input: "+String(result.JsRat))
-    })
+    // eternal recall of async function use readline
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+       });
+       
+       rl.question('JsRat>>> ', (answer) => {
+        // TODO: Log the answer in a database
+        console.log(`Thank you for your valuable feedback: ${answer}`);
+        rl.close()
+        eval.run(answer, server)
+        
+       });
 })
     
 
