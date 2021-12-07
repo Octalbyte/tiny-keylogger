@@ -4,7 +4,7 @@ let fs = require("fs")
 let serverlib = require("./lib/server")
 let server = net.createServer(serverlib.main)
 let banner = require("node-banner")
-let REPL = require("./lib/repl")
+
 console.clear()
 
 let rawconf;
@@ -22,8 +22,12 @@ let conf = JSON.parse(rawconf)
 
 //console.log(conf)
 
-server.listen(conf.port, () => {console.log("Server started")})
-    REPL.start(server)
+server.listen(conf.port, () => {
+    console.log("Server started")
+    
+})
+    
+
 }
 
 main()
