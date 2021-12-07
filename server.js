@@ -1,10 +1,10 @@
 let net = require("net")
 let crypto = require("crypto")
 let fs = require("fs")
-let server = net.createServer()
 let serverlib = require("./lib/server")
-server.on('connection', serverlib.main);
+let server = net.createServer(serverlib.main)
 let banner = require("node-banner")
+let REPL = require("./lib/repl")
 console.clear()
 
 let rawconf;
@@ -17,10 +17,13 @@ try {
     console.log(".data.json not found, using default configurations...")
     rawconf = fs.readFileSync("standard.json")
 }
-let conf = JSON.parse(rawconf)
-//console.log(conf)
-server.listen(conf.port, () => {console.log("Server started")})
 
+let conf = JSON.parse(rawconf)
+
+//console.log(conf)
+
+server.listen(conf.port, () => {console.log("Server started")})
+    REPL.start(server)
 }
 
 main()
