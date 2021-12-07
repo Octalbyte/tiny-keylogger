@@ -22,6 +22,7 @@
   "dependencies": {
     "chalk": "^5.0.0",
     "node-banner": "^1.4.0",
+    "prompt": "^1.2.0",
     "prompt-sync": "^4.2.0"
   }
 }
