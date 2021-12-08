@@ -34,4 +34,4 @@ $Body = "whoosh"
 $Subject = "whoosh"
 $SMTPServer = "WHOOSH"
 $url = "whoosh"
-$user = "whoosh"
+$user =
