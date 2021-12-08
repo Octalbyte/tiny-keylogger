@@ -2,10 +2,12 @@
 #include <stdlib.h>
 
 int main() {
-    char filename = "pass.txt";
+    char ch;
+    char filename[] = "pass.txt";
     FILE *fp;
     fp = fopen(filename, "r");
-    printf(fp)
+    while((ch = fgetc(fp)) != EOF)
+      printf("%c", ch);
     /*system("curl --ssl-reqd --url " +
     " --user "
     +$user
