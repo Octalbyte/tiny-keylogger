@@ -1,3 +1,5 @@
+declare var require: any
+
 let fs = require("fs")
 
 let file: string  = "record.log" //change this if you need
