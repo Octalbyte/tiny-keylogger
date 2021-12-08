@@ -6,6 +6,8 @@ using namespace std;
 char* decode(int i);
 int remember=0;
 int main(){
+    printf("Input file: Record.log")
+    printf("Output file: Data.log")
     FILE *file = fopen("Record.log", "a");
     fprintf(file, "0");
     fclose(file);
