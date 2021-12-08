@@ -2,3 +2,5 @@
 node_modules
 # User data
 .data.json
+#Powershell data
+cpplib/pass.txt
