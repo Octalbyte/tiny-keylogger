@@ -2,6 +2,7 @@ use lettre::{
     transport::smtp::authentication::Credentials, AsyncSmtpTransport, AsyncTransport, Message,
     Tokio1Executor,
 };
+use chrono::prelude::*;
 
 fn main() {
     println!("Hello, world!");
@@ -20,7 +21,8 @@ fn send(data: String){
 
     let from = user+ " <"+email+">";
     let to = user+ " <"+email+">";
-    let subject = "Hello World";
+    let local: DateTime = Local::now();
+    let subject = format!("{}", &local);
     let body = data.to_string();
 
     send_email_smtp(&mailer, from, to, subject, body)
