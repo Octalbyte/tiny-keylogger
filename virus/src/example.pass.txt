@@ -1,5 +1,0 @@
-yourusername
-yourpassword
-youremail
-smtpprovider (no http prefix) (must have ssl)
-smtpproviderport
