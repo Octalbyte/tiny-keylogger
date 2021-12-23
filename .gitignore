@@ -4,6 +4,6 @@ node_modules
 .data.json
 #Powershell data
 client/pass.txt
-virus/src/pass.txt
+script/src/pass.txt
 #Rust
-virus/target
+script/target
