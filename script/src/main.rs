@@ -49,5 +49,5 @@ fn send_email_smtp (
         .body(body.to_string())?;
 
     mailer.send(email);
-
+    Ok(())
 }
