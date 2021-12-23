@@ -41,7 +41,7 @@ fn send_email_smtp (
     to: &str,
     subject: &str,
     body: String,
-)-> Result<T, E>{
+)-> Result<(), String>{
     let email = Message::builder()
         .from(from.parse()?)
         .to(to.parse()?)
