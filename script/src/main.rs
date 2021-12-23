@@ -13,7 +13,7 @@ fn main() {
 
 
 
-fn send(data: String) -> Result<String, Error>{
+fn send(data: String) -> Result<(), String>{
     let file = File::open("pass.txt").expect("file not found!");
     let reader = BufReader::new(file);
     let lines = reader.lines();
