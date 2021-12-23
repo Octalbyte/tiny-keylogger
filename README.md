@@ -1,2 +1,2 @@
-# jsrat
-A Remote Administration Tool written in JS (and Rust)
+# rat
+A Remote Administration Tool written in Rust
