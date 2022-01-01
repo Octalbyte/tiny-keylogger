@@ -1,9 +1,0 @@
-# Node Modules
-node_modules
-# User data
-.data.json
-#Powershell data
-client/pass.txt
-script/src/pass.txt
-#Rust
-script/target
