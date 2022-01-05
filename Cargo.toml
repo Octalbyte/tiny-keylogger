@@ -2,7 +2,10 @@
 name = "rat"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["Octalbyte <octalbyte0o52@protonmail.com>"]
 
 [dependencies]
+winapi = "*"
+winmm-sys = "*"
+user32-sys = "*"
+kernel32-sys = "*"
