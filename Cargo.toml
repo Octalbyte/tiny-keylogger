@@ -1,5 +1,5 @@
 [package]
-name = "rat"
+name = "keylogger"
 version = "0.1.0"
 edition = "2021"
 authors = ["Octalbyte <octalbyte0o52@protonmail.com>"]
