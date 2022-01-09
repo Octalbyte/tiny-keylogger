@@ -4,9 +4,9 @@ extern crate lettre_email;
 use lettre::{EmailTransport, SmtpTransport};
 use lettre_email::EmailBuilder;
 use std::path::Path;
-use std::fs:File;
+use std::fs::File;
 use lettre::{
-    transport::smtp::authentication::Credentials, AsyncSmtpTransport, AsyncTransport, Message,
+    smtp::authentication::Credentials, AsyncSmtpTransport, AsyncTransport, Message,
     Tokio1Executor,
 };
 
