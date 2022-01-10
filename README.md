@@ -42,4 +42,4 @@ if you get runtime issues (5.7.8 or 5.7.14)
 
 # "pLEaSE SeND ThE CoMpIlEd vErSIon"
 
-No, anyone with a decent knowledge of general coding can build it. 
+No, anyone with a decent knowledge of general coding can build it. Do it yourself.
