@@ -33,7 +33,7 @@ g++ logger.cpp -o lg.exe
 ```
 
 # Troubleshooting
-
+## Gmail
 if you get runtime issues (5.7.8 or 5.7.14)
 
 - allow new loggins `https://g.co/allowaccess`
