@@ -37,8 +37,12 @@ g++ logger.cpp -o lg.exe
 if you get runtime issues (5.7.8 or 5.7.14)
 
 - allow new loggins `https://g.co/allowaccess`
-- mark all "attempted login alerts" as "it was me"
-- allow unsafe apps
+- mark all "attempted login alerts" in your inbox as "it was me"
+- allow unsafe apps in settings
+
+## Protonmail
+
+Protonmail does not support use via smtp (due to encryption/privacy/funding issues)
 
 # "pLEaSE SeND ThE CoMpIlEd vErSIon"
 
