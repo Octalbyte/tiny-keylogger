@@ -25,6 +25,7 @@ cd tiny-keylogger
 then config the files:
 
 `main.rs` -> fix the addresses according to your email
+
 `logger.cpp` -> time settings (default send every ten hours) 
 
 
