@@ -1,5 +1,5 @@
 
-```yaml
+```toml
 # Wallets to which you can donate :)
 
   BTC = "3NC14JNuzdLkxJTdNa6bnFXaYzMKMc1Uwt"
